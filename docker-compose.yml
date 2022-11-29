@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  alpine-unitd:
+    build: .
+    image: alpine-unitd
+    hostname: 'hobo'
+    environment:
+      - HL_USER_USERNAME=hacker
+      - HL_USER_PASSWORD=compass
+    ports:
+      - "80:80"
