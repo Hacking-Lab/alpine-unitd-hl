@@ -9,31 +9,31 @@ Please put your files in `/opt/www` folder
 
 ## Details
 ```
-╭─ /opt/alpine-unitd  main                                                                                                                                                                                    ✔ 
-╰─ docker images
-REPOSITORY     TAG       IMAGE ID       CREATED         SIZE
-alpine-unitd   latest    d4412efb1887   9 seconds ago   6.67MB
-
-╭─ /opt/alpine-unitd  main                                                                                                                                                                                    ✔ 
-╰─ tree .
 .
-├── docker-compose.yml
 ├── Dockerfile
 ├── README.md
+├── build-multi-arch.sh
+├── docker-compose.yml
 └── root
+    ├── date.txt
+    ├── etc
+    │   └── services.d
+    │       └── unitd
+    │           ├── finish
+    │           └── run
+    ├── flag-deploy-scripts
+    │   ├── deploy-env-flag.sh
+    │   └── deploy-file-flag.sh
     ├── opt
     │   └── www
     │       └── index.html
     └── var
         └── lib
             └── unit
-                ├── certs
                 ├── conf.json
                 └── version
 
-7 directories, 6 files
-
-╭─ /opt/alpine-unitd  main   
+11 directories, 12 files
 ```
 
 
