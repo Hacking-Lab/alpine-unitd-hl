@@ -10,17 +10,42 @@ Please put your files in `/opt/www` folder
 ## Details
 ```
 .
-├── Dockerfile
-├── README.md
 ├── build-multi-arch.sh
 ├── docker-compose.yml
+├── Dockerfile
+├── README.md
 └── root
     ├── date.txt
     ├── etc
-    │   └── services.d
-    │       └── unitd
-    │           ├── finish
-    │           └── run
+    │   └── s6-overlay
+    │       ├── s6-rc.d
+    │       │   ├── addflag
+    │       │   │   ├── dependencies.d
+    │       │   │   │   └── adduser -> ../../adduser
+    │       │   │   ├── type
+    │       │   │   └── up
+    │       │   ├── adduser
+    │       │   │   ├── type
+    │       │   │   └── up
+    │       │   ├── cron
+    │       │   │   ├── dependencies.d
+    │       │   │   │   └── adduser -> ../../adduser
+    │       │   │   ├── run
+    │       │   │   └── type
+    │       │   ├── unitd
+    │       │   │   ├── dependencies.d
+    │       │   │   │   └── adduser -> ../../adduser
+    │       │   │   ├── run
+    │       │   │   └── type
+    │       │   └── user
+    │       │       └── contents.d
+    │       │           ├── addflag -> ../../addflag
+    │       │           ├── adduser -> ../../adduser
+    │       │           ├── cron -> ../../cron
+    │       │           └── unitd -> ../../unitd
+    │       └── scripts
+    │           ├── addflag.sh
+    │           └── adduser.sh
     ├── flag-deploy-scripts
     │   ├── deploy-env-flag.sh
     │   └── deploy-file-flag.sh
@@ -33,7 +58,7 @@ Please put your files in `/opt/www` folder
                 ├── conf.json
                 └── version
 
-11 directories, 12 files
+28 directories, 20 files
 ```
 
 
