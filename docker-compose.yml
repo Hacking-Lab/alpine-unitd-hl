@@ -1,10 +1,8 @@
-version: '3.6'
 
 services:
-  alpine-unitd:
+  alpine-unitd-hl:
     build: .
-    image: alpine-unitd
-    hostname: 'hobo'
+    image: hackinglab/alpine-unitd-hl:3.2
     environment:
       - HL_USER_USERNAME=hacker
       - HL_USER_PASSWORD=compass

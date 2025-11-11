@@ -1,5 +1,4 @@
 FROM hackinglab/alpine-base-hl:3.2.0
-
 LABEL maintainer="Ivan Buetler <ivan.buetler@hacking-lab.com>"
 
 ADD root /

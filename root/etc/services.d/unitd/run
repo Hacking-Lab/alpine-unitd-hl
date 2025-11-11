@@ -1,6 +1,0 @@
-#!/command/with-contenv bash
-
-echo "starting unitd"
-exec /usr/sbin/unitd --no-daemon --log /dev/stdout;
-
-
