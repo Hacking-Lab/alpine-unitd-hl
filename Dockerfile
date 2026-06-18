@@ -1,4 +1,4 @@
-FROM hackinglab/alpine-base-hl:3.2.0
+FROM hackinglab/alpine-base-hl:3.2
 LABEL maintainer="Ivan Buetler <ivan.buetler@hacking-lab.com>"
 
 ADD root /
@@ -10,4 +10,3 @@ RUN apk add --no-cache --update \
 
 # Expose the ports for unitd (nginx mini web server)
 EXPOSE 80
-
